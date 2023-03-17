@@ -1,0 +1,48 @@
+/*
+DEFINIÇÕES GLOBAIS
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 1.2rem;
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+    word-wrap: break-word;
+}
+
+/*
+TIPOGRAFIA
+h1{
+}
+
+h2{
+}
+
+h3{
+}
+
+p{
+}    
+*/
+
+#ambiente{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #ffd258;
+    width: 100vw;
+    height: 100vh;
+}
