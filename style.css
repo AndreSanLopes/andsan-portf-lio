@@ -2,6 +2,7 @@
 DEFINIÇÕES GLOBAIS
 */
 
+/*FONTE PRINCIPAL*/
 @import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
 
 * {
@@ -18,47 +19,95 @@ DEFINIÇÕES GLOBAIS
     padding: 0;
 }
 
-body{
+body {
     font-size: 1.2rem;
     text-rendering: optimizelegibility;
     -webkit-font-smoothing: antialiased;
     word-wrap: break-word;
 }
 
-@media screen and(max-width: 720px){
-    #ambiente{
+@media screen and(max-width: 720px) {
+    #ambiente {
         flex-direction: column;
     }
 }
 
 /*
 TIPOGRAFIA
-h1{
-}
 */
-h2{
+h1 {
+    text-transform: Capitalize;
+    font-size: 56px;
+    letter-spacing: normal;
+    font-weight: 100;
+}
+
+h2 {
     text-transform: Capitalize;
     font-size: 48px;
     letter-spacing: 1vh;
 }
-/*
+
+
 h3{
+    text-transform: uppercase;
+    font-size: 32px;
+    letter-spacing: -0.5vh;
+    font-weight: 100;
 }
 
 p{
 }    
-*/
 
-#ambiente{
+
+main {
+    display: grid;
+    /*COLUNAS DO main*/
+    grid-template-columns: auto;
+    /*LINHAS DO main*/
+    grid-template-rows: auto auto auto;
+    /*ESPAÇAMENTO ENTRE LINHAS*/
+    grid-row-gap: 16px;
+}
+
+/*PARÁGRAFOS NO main*/
+main p {
+    text-align: justify;
+}
+
+/*CONTAINER*/
+#ambiente {
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     background-color: transparent;
-    width: 100vw;
-    height: 100vh;
     font-family: Roboto Slab;
 }
 
-main p{
-    padding-bottom: 16px;
+.bloco-1 {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
 }
+
+.bloco-2 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.bloco-3 {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.bloco-1,
+.bloco-2,
+.bloco-3 {}
