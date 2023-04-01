@@ -5,6 +5,9 @@ DEFINIÇÕES GLOBAIS
 /*FONTE PRINCIPAL*/
 @import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
 
+/*FONTE h3*/
+@import url(https://fonts.googleapis.com/css?family=Comfortaa);
+
 :root {
     --amarelo: #f3f300;
 }
@@ -48,17 +51,60 @@ h2 {
 
 
 h3 {
+    /*FONTE ESPECÍFICA*/
+    font-family: Comfortaa;
     text-transform: uppercase;
     font-size: 32px;
     letter-spacing: -0.5vh;
     font-weight: 100;
 }
 
+ul, li, a{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+
 /*p {}*/
 
+header{
+    /*DISPLAY*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    /*TAMANHO*/
+    width: 100vw;
+    height: 72px;
+    /*ESTILO*/
+    background-color: blueviolet;
+    color: white;
+}
+
+header h3{
+    text-transform: capitalize;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    cursor: context-menu;
+    /*font-size: ;*/
+}
+
+/*PARÁGRAFOS DO header*/
+header p{
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+/*LISTAS DO header*/
+header li{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
 
 main {
     padding: 16px;
+    /*DISPLAY*/
     display: grid;
     /*COLUNAS DO main*/
     grid-template-columns: auto auto;
@@ -73,10 +119,30 @@ main p {
     text-align: justify;
 }
 
+footer{
+    /*DISPLAY*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /*TAMANHO*/
+    width: 100vw;
+    height: 200px;
+    /*ESTILO*/
+    background-color: blueviolet;
+}
+
+footer p{
+    /*ESTILO*/
+    color: white;
+    text-align: justify;
+}
+
 /*CONTAINER*/
 #ambiente {
+    /*TAMANHO*/
     width: 100vw;
     height: 100vh;
+    /*DISPLAY*/
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -121,6 +187,10 @@ RESPONSIVIDADE
     DEFINE A CONFIGURAÇÃO DE COLUNA AO INVÉS DE LINHAS PARA flexbox
     */
     #ambiente {
+        flex-direction: column;
+    }
+
+    header{
         flex-direction: column;
     }
 }
