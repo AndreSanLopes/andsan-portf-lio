@@ -60,7 +60,7 @@ h3 {
     font-weight: 100;
 }
 
-h4{
+h4 {
     font-size: 28px;
 }
 
@@ -92,6 +92,7 @@ header {
     /*TAMANHO*/
     width: 100vw;
     height: 72px;
+    padding: 8px;
     /*ESTILO*/
     background-color: white;
     color: black;
@@ -119,7 +120,8 @@ header li {
 }
 
 main {
-    padding: 16px;
+    /*TAMANHO*/
+    padding: 8px;
     /*DISPLAY*/
     display: grid;
     /*COLUNAS DO main*/
@@ -135,25 +137,40 @@ main p {
     text-align: justify;
 }
 
+/*
+RODAPÉ
+*/
 footer {
     /*DISPLAY*/
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     /*TAMANHO*/
-    width: 100vw;
-    height: 280px;
+    width: initial;
+    height: initial;
     /*ESTILO*/
-    background-color: blueviolet;
+    background-color: lightgray;
+}
+
+footer p, a{
+    color: black;
 }
 
 footer p {
     /*ESTILO*/
-    color: white;
     text-align: justify;
+    font-size: 14px;
 }
 
-/*CONTAINER*/
+footer a {
+    /*ESTILO*/
+    font-size: 14px;
+    font-family: Arial;
+    /*FONTE ESPECÍFICA*/
+}
+
+/*div PRINCIPAL*/
 #ambiente {
     /*TAMANHO*/
     width: 100vw;
@@ -208,7 +225,9 @@ footer p {
 /*
 DESCRIÇÃO DOS ITENS
 */
-#sub-1, #sub-2, #sub-3{
+#sub-1,
+#sub-2,
+#sub-3 {
     /*DISPLAY*/
     display: flex;
     flex-direction: row;
@@ -217,9 +236,95 @@ DESCRIÇÃO DOS ITENS
 }
 
 /*
+CONTAINER footer
+*/
+#contFooter {
+    /*TAMANHO*/
+    width: inherit;
+    height: inherit;
+    padding: 16px;
+    /*DISPLAY*/
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+}
+
+/*
+grid-row-start:;
+grid-row-end:;
+grid-column-start:;
+grid-column-end:;
+*/
+
+/*
+TESTE
+*/
+#tst {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+#tst2 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+/*
+p footer
+*/
+#txtFooter {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+/*
+TESTE
+*/
+
+#underTxt {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+#tst3 {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+/*
+ul footer
+*/
+#listFooter {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    /*DISPLAY*/
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/*
 RESPONSIVIDADE
 */
 @media screen and (max-width: 720px) {
+
+    body {
+        font-size: 1rem;
+    }
 
     /*
     DEFINE A CONFIGURAÇÃO DE COLUNA AO INVÉS DE LINHAS PARA flexbox
@@ -229,11 +334,20 @@ RESPONSIVIDADE
         flex-wrap: nowrap;
     }
 
+    /*
+    ALTERA A EXIBIÇÃO DO header
+    */
     header {
         flex-direction: column;
     }
 
-    .bloco-1, .bloco-2, .bloco-3{
+
+    /*
+    ALTERA A EXIBIÇÃO DOS TEXTOS
+    */
+    .bloco-1,
+    .bloco-2,
+    .bloco-3 {
         flex-direction: column;
     }
 }
