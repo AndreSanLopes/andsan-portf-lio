@@ -153,7 +153,8 @@ footer {
     background-color: lightgray;
 }
 
-footer p, a{
+footer p,
+a {
     color: black;
 }
 
@@ -169,6 +170,13 @@ footer a {
     font-family: Arial;
     /*FONTE ESPECÍFICA*/
 }
+
+footer a:hover {
+    font-weight: 600;
+}
+
+/*BOXICONS*/
+/**/
 
 /*div PRINCIPAL*/
 #ambiente {
@@ -315,6 +323,7 @@ ul footer
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 /*
@@ -324,6 +333,7 @@ RESPONSIVIDADE
 
     body {
         font-size: 1rem;
+        /*DIMINUI A FONTE PARA MELHOR VISUALIZAÇÃO EM TELAS PEQUENAS*/
     }
 
     /*
@@ -350,4 +360,57 @@ RESPONSIVIDADE
     .bloco-3 {
         flex-direction: column;
     }
+
+    #contFooter {
+        grid-template-columns: auto; /*UNIFICA AS COLUNAS DA grid*/
+        grid-template-rows: auto auto auto auto auto auto;
+    }
+
+    #tst {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    
+    #tst2 {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    
+    /*
+    p footer
+    */
+    #txtFooter {
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    
+    /*
+    TESTE
+    */
+    
+    #underTxt {
+        grid-row-start: 4;
+        grid-row-end: 5;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    
+    #tst3 {
+        grid-row-start: 5;
+        grid-row-end: 6;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    #listFooter{
+        grid-row-start: 6;
+        grid-row-end: 7;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }    
 }
